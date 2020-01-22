@@ -19,19 +19,19 @@ public class PlayerTwoMove : MonoBehaviour
     {
         if (!cm.GetComponent<CombatManager>().GetInCombat())
         {
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.Keypad4))
             {
                 transform.position += Vector3.left * speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.Keypad6))
             {
                 transform.position += Vector3.right * speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.Keypad8))
             {
                 transform.position += Vector3.up * speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.Keypad5))
             {
                 transform.position += Vector3.down * speed * Time.deltaTime;
             }
@@ -40,12 +40,12 @@ public class PlayerTwoMove : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (!cm.GetComponent<CombatManager>().GetInCombat() && collision.tag == "Player" && Input.GetKeyUp(KeyCode.Return))
+        if (!cm.GetComponent<CombatManager>().GetInCombat() && collision.tag == "Player" && Input.GetKeyUp(KeyCode.Keypad7))
         {
             Debug.Log("The Lesser Player Intiates Combat");
             /* UNCOMMENT AFTER TESTING */
-            //cm.GetComponent<CombatManager>().SetInCombat(true);
-            cm.GetComponent<CombatManager>().SetFirstStrike(2);
+            cm.GetComponent<CombatManager>().SetInCombat(true);
+            cm.GetComponent<CombatManager>().SetPlayerAttack(2);
         }
     }
 }

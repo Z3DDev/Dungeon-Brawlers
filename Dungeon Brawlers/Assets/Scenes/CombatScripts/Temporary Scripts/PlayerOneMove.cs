@@ -47,8 +47,8 @@ public class PlayerOneMove : MonoBehaviour
         {
             Debug.Log("Player One Intiates Combat");
             /* UNCOMMENT AFTER TESTING */
-            //cm.GetComponent<CombatManager>().SetInCombat(true);
-            cm.GetComponent<CombatManager>().SetFirstStrike(1);
+            cm.GetComponent<CombatManager>().SetInCombat(true);
+            cm.GetComponent<CombatManager>().SetPlayerAttack(1);
         }
     }
 }
