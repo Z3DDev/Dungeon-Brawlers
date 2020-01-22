@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4752162502234159977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4752162502234159978}
+  - component: {fileID: 4752162502234159980}
+  - component: {fileID: 4752162502234159979}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4752162502234159978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752162502234159977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.051381335, y: -0.03392101, z: -0.76771224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4752162502234159980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752162502234159977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6ba5a20adc15f40b30753bbd75aadc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columns: 4
+  rows: 6
+  obstacleCount:
+    minimum: 1
+    maximum: 3
+  chestCount:
+    minimum: 0
+    maximum: 2
+  exit: {fileID: 5621096357976947383, guid: 8259e14fae0d67844aee1e8935f8fc38, type: 3}
+  innerFloorTile:
+  - {fileID: 1664766302775911620, guid: 51926bb521307f34db587a555ce19336, type: 3}
+  floorTiles:
+  - {fileID: 8942254277024214909, guid: de82b4e34cde6994a98d2a0ea462e8b5, type: 3}
+  - {fileID: 3328808644068692571, guid: 9709a35a0d9b6e04c90e4f6fee361ff2, type: 3}
+  - {fileID: 5941769954034522493, guid: 39f7addf57b5a054c84b52a92de74b5f, type: 3}
+  - {fileID: 6812811209296374901, guid: fdefee0bac4a76f4b9d9c412dfcdee59, type: 3}
+  - {fileID: 5521404233849034368, guid: 766d650796322e844bdf922e30153bb8, type: 3}
+  - {fileID: 1727076994457787764, guid: f48f723d0bee5e4479a83e410d81a210, type: 3}
+  - {fileID: 6171275284946059962, guid: da3fc38e8c8eef644a282ab547a4b47e, type: 3}
+  - {fileID: 992374888914144218, guid: 520e89ff054f4a5469378dfc62aa1c03, type: 3}
+  f_westT:
+  - {fileID: 6812811209296374901, guid: fdefee0bac4a76f4b9d9c412dfcdee59, type: 3}
+  f_eastT:
+  - {fileID: 5521404233849034368, guid: 766d650796322e844bdf922e30153bb8, type: 3}
+  f_northT:
+  - {fileID: 6171275284946059962, guid: da3fc38e8c8eef644a282ab547a4b47e, type: 3}
+  f_southT:
+  - {fileID: 3328808644068692571, guid: 9709a35a0d9b6e04c90e4f6fee361ff2, type: 3}
+  f_northwestT:
+  - {fileID: 1727076994457787764, guid: f48f723d0bee5e4479a83e410d81a210, type: 3}
+  f_northeastT:
+  - {fileID: 992374888914144218, guid: 520e89ff054f4a5469378dfc62aa1c03, type: 3}
+  f_southwestT:
+  - {fileID: 8942254277024214909, guid: de82b4e34cde6994a98d2a0ea462e8b5, type: 3}
+  f_southeastT:
+  - {fileID: 5941769954034522493, guid: 39f7addf57b5a054c84b52a92de74b5f, type: 3}
+  innerWallTiles:
+  - {fileID: 4740133155076405262, guid: 750ab33f0e1533949a2631b57ee3e52e, type: 3}
+  - {fileID: 8627361793589461328, guid: 10f16c2b777e20c4e829d002e0e782fe, type: 3}
+  - {fileID: 1140036745893572645, guid: 11b3509af7d95be40ac33204c044fc1d, type: 3}
+  - {fileID: 3363085275735640455, guid: ef96cbd5e6d2b9c40a282f19142ee992, type: 3}
+  - {fileID: 7986180021977224356, guid: 30919fd7f78b5a64e848e17bb33f4f0c, type: 3}
+  - {fileID: 7727872942306499411, guid: 220bf5a319766474aa22e19c3e5b1636, type: 3}
+  - {fileID: 5371655886019461251, guid: 8ce05bc0c15b7ce4ea6d5d1c2def1974, type: 3}
+  - {fileID: 8960422142653584464, guid: 5f6370490daa01f42992a7363b005834, type: 3}
+  i_westWT:
+  - {fileID: 1140036745893572645, guid: 11b3509af7d95be40ac33204c044fc1d, type: 3}
+  i_eastWT:
+  - {fileID: 7727872942306499411, guid: 220bf5a319766474aa22e19c3e5b1636, type: 3}
+  i_northWT:
+  - {fileID: 8960422142653584464, guid: 5f6370490daa01f42992a7363b005834, type: 3}
+  i_southWT:
+  - {fileID: 4740133155076405262, guid: 750ab33f0e1533949a2631b57ee3e52e, type: 3}
+  i_northwestWT:
+  - {fileID: 3363085275735640455, guid: ef96cbd5e6d2b9c40a282f19142ee992, type: 3}
+  i_northeastWT:
+  - {fileID: 5371655886019461251, guid: 8ce05bc0c15b7ce4ea6d5d1c2def1974, type: 3}
+  i_southwestWT:
+  - {fileID: 8627361793589461328, guid: 10f16c2b777e20c4e829d002e0e782fe, type: 3}
+  i_southeastWT:
+  - {fileID: 7986180021977224356, guid: 30919fd7f78b5a64e848e17bb33f4f0c, type: 3}
+  outerWallTiles:
+  - {fileID: 9184751349503339651, guid: 60753eab5ee426a4f9ac0eea01137a4c, type: 3}
+  - {fileID: 4901381444644447982, guid: 5f572b8c0c4f0844b9407aabae63f638, type: 3}
+  - {fileID: 6159262698688717150, guid: 256b75e801d94454abeecf76e8a29c27, type: 3}
+  - {fileID: 8953532740708278259, guid: b4a1757c278fa38478aae314d71799be, type: 3}
+  - {fileID: 32842555119961034, guid: 55ba6bc98005b6748965198445ecbbac, type: 3}
+  - {fileID: 5287703942868867256, guid: a707c9b00ca6c0e4e84b9bfedb51e18c, type: 3}
+  - {fileID: 5483662885121603237, guid: 74edcd5844dbc15429a00d251617ab99, type: 3}
+  - {fileID: 1333563741439134712, guid: cc8ac6d0e7cca9d4e8d8cb1f05b13d98, type: 3}
+  o_westWT:
+  - {fileID: 8953532740708278259, guid: b4a1757c278fa38478aae314d71799be, type: 3}
+  o_eastWT:
+  - {fileID: 32842555119961034, guid: 55ba6bc98005b6748965198445ecbbac, type: 3}
+  o_northWT:
+  - {fileID: 5483662885121603237, guid: 74edcd5844dbc15429a00d251617ab99, type: 3}
+  o_southWT:
+  - {fileID: 4901381444644447982, guid: 5f572b8c0c4f0844b9407aabae63f638, type: 3}
+  o_northwestWT:
+  - {fileID: 5287703942868867256, guid: a707c9b00ca6c0e4e84b9bfedb51e18c, type: 3}
+  o_northeastWT:
+  - {fileID: 1333563741439134712, guid: cc8ac6d0e7cca9d4e8d8cb1f05b13d98, type: 3}
+  o_southwestWT:
+  - {fileID: 9184751349503339651, guid: 60753eab5ee426a4f9ac0eea01137a4c, type: 3}
+  o_southeastWT:
+  - {fileID: 6159262698688717150, guid: 256b75e801d94454abeecf76e8a29c27, type: 3}
+  chestTiles:
+  - {fileID: 1761099740353018138, guid: 0a6d75569c8cd6448be754090d94b36d, type: 3}
+  - {fileID: 9221836323115354579, guid: e89bf0f0d3a4f2147ba3339a2178c987, type: 3}
+  - {fileID: 1974973789016959239, guid: 5ad0dbb026d869c47ae660e772ad42fa, type: 3}
+  obstacleTiles:
+  - {fileID: 2470540654397988101, guid: 0f543a8a7ba691048840bef36a750bb0, type: 3}
+  - {fileID: 1384954905418091621, guid: bc77039b76332f245ae808da1a86cf09, type: 3}
+  - {fileID: 5177784606344740629, guid: 55850ce705dbbc3489ca75750779e2c2, type: 3}
+  - {fileID: 3330054334165810267, guid: 57855ce15d549cf44ac3fa9e3e8363d9, type: 3}
+  - {fileID: 5042796522983047336, guid: 6d7b4feea9bec8a42a56567fa014396c, type: 3}
+  - {fileID: 1125651330695933364, guid: 32a0934af4185104c987c941e5d79e4d, type: 3}
+  - {fileID: 1749123057429173152, guid: c887dd3afad27dd40b264652c8ad4ca4, type: 3}
+  - {fileID: 1639235765231508034, guid: c1a41bff6f78254419697dadf7f6b4cd, type: 3}
+  - {fileID: 7991487366333213507, guid: 0014a3ed556fb8349a8455e5275d3374, type: 3}
+  - {fileID: 6855918822344614516, guid: ae02050d61bc7e7478292569bbcc9bb8, type: 3}
+  - {fileID: 6771667303845088152, guid: 6b36af109a1fcde419933493693867ae, type: 3}
+  - {fileID: 4460996605063958504, guid: e177a09a384b39f46bfee65a6295d70f, type: 3}
+  enemyTiles: []
+--- !u!114 &4752162502234159979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752162502234159977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2bfd7f92b1b18140bbdb76805c0719b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardScript: {fileID: 0}
