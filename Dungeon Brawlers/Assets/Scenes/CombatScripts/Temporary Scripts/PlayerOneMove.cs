@@ -38,6 +38,8 @@ public class PlayerOneMove : MonoBehaviour
             }
 
             transform.position = pos;
+
+
         }
     }
 

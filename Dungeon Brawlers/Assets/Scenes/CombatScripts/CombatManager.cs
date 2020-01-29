@@ -5,16 +5,24 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour
 {
     public RectTransform combatPanel;
+    public GameObject playerOne;
+    public GameObject playerTwo;
 
     //Player One Menu Items
     public GameObject playerOneMenuGen;
+    public GameObject playerOneHealth;
     public GameObject playerOneBasicMenu;
     public GameObject playerOneFightMenu;
 
     //Player Two Menu Items
     public GameObject playerTwoMenuGen;
+    public GameObject playerTwoHealth;
     public GameObject playerTwoBasicMenu;
     public GameObject playerTwoFightMenu;
+
+    //GameOver Screens
+    public GameObject playerOneWins;
+    public GameObject playerTwoWins;
 
     private bool inCombat;
     private int playerAttack;
@@ -34,12 +42,17 @@ public class CombatManager : MonoBehaviour
     void Update()
     {
         MenuHandler();
+        UpdateHealth();
     }
 
 
     private void MenuHandler()
     {
-        if(inCombat)
+        int attackDamage = 0;
+        int runChance = 0;
+
+        //DETERMINES WHO ATTACKED FIRST
+        if (inCombat)
         {
             combatPanel.gameObject.SetActive(true);
 
@@ -60,7 +73,7 @@ public class CombatManager : MonoBehaviour
             }
         }
 
-
+        //DETERMINES IF THEY ATTACK OR RUN
         if (inCombat && playerOneBasicMenu.activeSelf && playerOneMenuGen.activeSelf)
         {
             if (Input.GetKey("a"))
@@ -68,11 +81,26 @@ public class CombatManager : MonoBehaviour
                 Debug.Log("A was selected");
                 playerOneBasicMenu.SetActive(false);
                 playerOneFightMenu.SetActive(true);
+                attackDamage = Random.Range(0, 20);
+                playerTwo.GetComponent<PlayerHealth>().health -= attackDamage;
+                if (playerTwo.GetComponent<PlayerHealth>().health > 0)
+                {
+                    UpdateHealth();
+                }
+                else
+                {
+                    Debug.Log("Player One Wins");
+                    ShowWinner(playerOne.GetComponent<PlayerHealth>().health, playerTwo.GetComponent<PlayerHealth>().health);
+                }
             }
             else if (Input.GetKey("d"))
             {
                 Debug.Log("D was selected");
-                inCombat = false;
+                runChance = Random.Range(1, 10);
+                if (runChance > 5)
+                {
+                    inCombat = false;
+                }
             }
         }
         else if (inCombat && playerTwoBasicMenu.activeSelf && playerTwoMenuGen.activeSelf)
@@ -82,6 +110,17 @@ public class CombatManager : MonoBehaviour
                 Debug.Log("4 was selected");
                 playerTwoBasicMenu.SetActive(false);
                 playerTwoFightMenu.SetActive(true);
+                attackDamage = Random.Range(0, 20);
+                playerOne.GetComponent<PlayerHealth>().health -= attackDamage;
+                if (playerOne.GetComponent<PlayerHealth>().health > 0)
+                {
+                    UpdateHealth();
+                }
+                else
+                {
+                    Debug.Log("Player Two Wins");
+                    ShowWinner(playerOne.GetComponent<PlayerHealth>().health, playerTwo.GetComponent<PlayerHealth>().health);
+                }
             }
             else if (Input.GetKey(KeyCode.Keypad6))
             {
@@ -90,7 +129,7 @@ public class CombatManager : MonoBehaviour
             }
         }
 
-
+        //ENDS THE PLAYER'S TURN AND PASSES CONTROL TO THE NEXT PLAYER
         if (inCombat && playerOneFightMenu.activeSelf)
         {
             playerAttack = 2;
@@ -104,7 +143,7 @@ public class CombatManager : MonoBehaviour
             playerTwoBasicMenu.SetActive(true);
         }
 
-
+        //RESETS THE PANELS AFTER THE BATTLE HAS ENDED
         if (!inCombat)
         {
             ResetCombatMenu();
@@ -112,6 +151,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+    //RESETS ALL OF THE MENUS TO THE STATES THEY NEED TO BE IN
     private void ResetCombatMenu()
     {
         playerOneFightMenu.SetActive(false);
@@ -121,6 +161,30 @@ public class CombatManager : MonoBehaviour
         playerTwoFightMenu.SetActive(false);
         playerTwoBasicMenu.SetActive(true);
         playerTwoMenuGen.SetActive(false);
+    }
+
+    //UPDATES THE PLAYER'S HEALTH AFTER BEING ATTACKED
+    private void UpdateHealth()
+    {
+        playerOneHealth.GetComponent<UnityEngine.UI.Text>().text = "Health: " + playerOne.GetComponent<PlayerHealth>().health.ToString();
+        playerTwoHealth.GetComponent<UnityEngine.UI.Text>().text = "Health: " + playerTwo.GetComponent<PlayerHealth>().health.ToString();
+    }
+
+    //DISPLAYS WHEN A PLAYER HAS WON
+    private void ShowWinner(int healthOne, int healthTwo)
+    {
+        if (healthTwo <= 0)
+        {
+            playerOneWins.SetActive(true);
+        }
+        else if (healthOne <= 0)
+        {
+            playerTwoWins.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Something went wrong with displaying a winner.");
+        }
     }
 
 

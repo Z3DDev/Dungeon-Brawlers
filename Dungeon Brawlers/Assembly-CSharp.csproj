@@ -63,8 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\CombatScripts\CombatManager.cs" />
+    <Compile Include="Assets\Scenes\CombatScripts\Temporary Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scenes\CombatScripts\Temporary Scripts\PlayerOneMove.cs" />
     <Compile Include="Assets\Scenes\CombatScripts\Temporary Scripts\PlayerTwoMove.cs" />
+    <Compile Include="Assets\Scripts\BoardManager.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Alex/Desktop/Unity Networking/Dungeon-Brawlers/Dungeon Brawlers/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
