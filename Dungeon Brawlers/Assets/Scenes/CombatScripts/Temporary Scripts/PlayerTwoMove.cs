@@ -7,6 +7,7 @@ public class PlayerTwoMove : MonoBehaviour
     public float speed;
     private bool inRange;
     private GameObject cm;
+    public int key;
 
     // Start is called before the first frame update
     void Start()

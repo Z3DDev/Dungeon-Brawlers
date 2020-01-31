@@ -16,10 +16,14 @@ public class BoardManager : MonoBehaviour {
         }
     }
 
-    public int columns;
-    public int rows;
+    public int columns, rows;
+    
+    //<------------------------------ Count Objects ------------------------------>
     public Count obstacleCount = new Count(1, 5);
     public Count chestCount = new Count(1, 5);
+    public Count grassCount = new Count(1, 5);
+
+    //<------------------------------ Room Objects ------------------------------>
     public GameObject exit;
     public GameObject[] innerFloorTile;
     //Floor Tile GameObjects
@@ -32,10 +36,14 @@ public class BoardManager : MonoBehaviour {
     public GameObject[] outerWallTiles;
     
     public GameObject[] o_westWT, o_eastWT, o_northWT, o_southWT, o_northwestWT, o_northeastWT, o_southwestWT, o_southeastWT;
+        
+    //<------------------------------ Game Objects ------------------------------>
     public GameObject[] chestTiles;
     public GameObject[] obstacleTiles;
+    public GameObject[] grassTiles;
     public GameObject[] enemyTiles;
 
+    //<------------------------------ Generated Board ------------------------------>
     private Transform boardHolder;
     private List <Vector3> gridPositions = new List <Vector3> ();
     
@@ -215,6 +223,7 @@ public class BoardManager : MonoBehaviour {
         InitialiseList();
         LayoutObjectAtRandom(obstacleTiles, obstacleCount.minimum, obstacleCount.maximum);
         LayoutObjectAtRandom(chestTiles, chestCount.minimum, chestCount.maximum);
+        LayoutObjectAtRandom(grassTiles, grassCount.minimum, grassCount.maximum);
 
         /* int enemyCount = (int)Mathf.Log(level, 2f);
         LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount); */

@@ -284,6 +284,33 @@ TextureImporter:
   - first:
       213: 3153733649514484463
     second: BrickML
+  - first:
+      213: 7928212780688345954
+    second: OuterWallTLSpecial
+  - first:
+      213: -5678239014279069140
+    second: OuterWallTRSpecial
+  - first:
+      213: -326905921348092001
+    second: OuterWallBLSpecial
+  - first:
+      213: -2470254251256612046
+    second: OuterWallBRSpecial
+  - first:
+      213: -8281524842495652920
+    second: InnerWallTLSpecial
+  - first:
+      213: -415567408787622952
+    second: InnerWallTRSpecial
+  - first:
+      213: 5774165467882751213
+    second: InnerWallBLSpecial
+  - first:
+      213: -6213657704998922007
+    second: InnerWallBRSpecial
+  - first:
+      213: 6673891768026933865
+    second: Deadspace
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -2385,6 +2412,195 @@ TextureImporter:
       bones: []
       spriteID: 7cb3e1d70a29a1b4f9f0f5d877e325cd
       internalID: 3153733649514484463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuterWallTLSpecial
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 53
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988b278ef432588408991dbc19d40156
+      internalID: 7928212780688345954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuterWallTRSpecial
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 53
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c3d176e22444145afd9f2c725d76e5
+      internalID: -5678239014279069140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuterWallBLSpecial
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb9c353993147245aaa36b9e091864a
+      internalID: -326905921348092001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuterWallBRSpecial
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ec343f961555c489f21aed29e0fa36
+      internalID: -2470254251256612046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InnerWallTLSpecial
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 53
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5feca3ff70e0e4a8fd9e2f649254ee
+      internalID: -8281524842495652920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InnerWallTRSpecial
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 53
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38cbd58f5430224e9a1c0f03bb2ffe9
+      internalID: -415567408787622952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InnerWallBLSpecial
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d558463c4ae4749ba6632b90b5ba69
+      internalID: 5774165467882751213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InnerWallBRSpecial
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3de7ac1e7eb16b408367f6c0ee5439f
+      internalID: -6213657704998922007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deadspace
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 53
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93413bf96c55de54d97a4d7ff218124c
+      internalID: 6673891768026933865
       vertices: []
       indices: 
       edges: []
