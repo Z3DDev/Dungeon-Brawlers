@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: 4343022134617186897
     second: CameraBorder
+  - first:
+      213: -7999830074067612906
+    second: PlayerInfoFlipped
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -313,7 +316,7 @@ TextureImporter:
         width: 102
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 6, y: 4, z: 6, w: 4}
       outline: []
       physicsShape: []
@@ -321,6 +324,27 @@ TextureImporter:
       bones: []
       spriteID: 9e124a42405385e4390e8af126118972
       internalID: 4343022134617186897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerInfoFlipped
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 111
+        width: 124
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 3, y: 3, z: 2, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36611d95fc6949d43ace393315ff1a97
+      internalID: -7999830074067612906
       vertices: []
       indices: 
       edges: []

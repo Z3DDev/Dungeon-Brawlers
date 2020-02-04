@@ -11,9 +11,11 @@ public class PlayerCombat : MonoBehaviour {
     public LayerMask opponentLayer;
 
     private GameObject cm;
+    public PlayerMovement player;
 
     void Awake() {
         cm = GameObject.FindGameObjectWithTag("CombatManager");
+        player = GetComponent<PlayerMovement>();
     }
 
     void Update() {
@@ -23,7 +25,12 @@ public class PlayerCombat : MonoBehaviour {
     }
 
     void Attack() {
-        anim.SetTrigger("Attack");
+        if(player.playerid == 1) {
+            anim.SetTrigger("P1_Attack");
+        }
+        else if(player.playerid == 2) {
+            anim.SetTrigger("P2_Attack");
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision) {
