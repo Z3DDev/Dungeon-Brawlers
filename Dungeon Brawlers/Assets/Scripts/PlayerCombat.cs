@@ -11,11 +11,11 @@ public class PlayerCombat : MonoBehaviour {
     public LayerMask opponentLayer;
 
     private GameObject cm;
-    public PlayerMovement player;
+    public PlayerController player;
 
     void Awake() {
         cm = GameObject.FindGameObjectWithTag("CombatManager");
-        player = GetComponent<PlayerMovement>();
+        player = GetComponent<PlayerController>();
     }
 
     void Update() {

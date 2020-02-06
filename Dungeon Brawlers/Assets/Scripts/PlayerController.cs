@@ -1,24 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
+    //<-------------------------------- Player -------------------------------->
+    public PlayerController Player1;
+    public PlayerController Player2;
 
-    //Player Movement
+    public TextMeshProUGUI playerOneName, playerOneHealth, playerOneAttack, playerOneDefense;
+    public TextMeshProUGUI playerTwoName, playerTwoHealth, playerTwoAttack, playerTwoDefense;
+    public TextMeshProUGUI p1UpdateHealth, p1UpdateAtk, p1UpdateDef;
+    public TextMeshProUGUI p2UpdateHealth, p2UpdateAtk, p2UpdateDef;
+
+    //<-------------------------------- Player Movement -------------------------------->
     public int playerid;                //Each Player is assigned an ID to distinguish their controls
-    public float mvSpeed = 5f;          //Default Player Move Speed
-    public Rigidbody2D rb;              //Instance of the Rigidbody Object on the Player
-    public Animator anim;               //Instance of the Animator
+    private float mvSpeed = 5f;          //Default Player Move Speed
+    private Rigidbody2D rb;              //Instance of the Rigidbody Object on the Player
+    private Animator anim;               //Instance of the Animator
     Vector2 movement;                   //Vector in which the Player moves
 
-    //Player Combat
-    public Transform atkPoint;          //Attack Point for how far the Player can strike
-    public float atkRange = 0.5f;       //Range at which the Player can strike
-    public LayerMask opponentLayer;     //Layer Mask to distinguish what the Player can hit
+    //<-------------------------------- Player Combat -------------------------------->
+    private Transform atkPoint;          //Attack Point for how far the Player can strike
+    private float atkRange = 0.5f;       //Range at which the Player can strike
+    private LayerMask opponentLayer;     //Layer Mask to distinguish what the Player can hit
 
     void Awake() {
         rb = GetComponent<Rigidbody2D>();   //On Awake, grab the Rigidbody2D component
         anim = GetComponent<Animator>();    //On Awake, grab the Animator component
+
+        if(playerid == 1) {
+            Player1 = GetComponent<PlayerController>();
+        }
+        else if(playerid == 2) {
+            Player2 = GetComponent<PlayerController>();
+        }
     }
 
     void Update() {
